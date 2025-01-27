@@ -1,0 +1,39 @@
+.items{
+  display: flex;
+  gap: 30px;
+}
+
+.globe,
+.smart{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.img{
+  box-shadow: var(--image-shadow);
+}
+
+.contactNumber{
+  color: gray;
+  font-size: 32px;
+}
+
+@media screen and (max-width: 1024px) {
+  .title {
+    font-size: 64px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 48px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .title {
+    font-size: 36px;
+  }
+}

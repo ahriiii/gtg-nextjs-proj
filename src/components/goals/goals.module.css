@@ -1,0 +1,53 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 30px;
+}
+
+.item {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+.numberWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #5e4fff;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+}
+
+.number {
+  flex: 1;
+  font-size: 50px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+
+.description {
+  flex: 2;
+}
+
+@media screen and (max-width:1280px) {
+  
+}
+
+@media screen and (max-width:1024px) {
+  .item{
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width:768px) {
+  
+}
+
+@media screen and (max-width:640px) {
+  
+}

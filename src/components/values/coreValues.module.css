@@ -1,0 +1,43 @@
+.container {
+  margin-top: 30px;
+  display: flex;
+  gap: 30px;
+}
+
+.card {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+  width: 200px;
+  height: 250px;
+}
+
+.coreValuesContainer img {
+  text-align: center;
+}
+
+.titleContainer {
+  background-color: #5e4fff;
+  border-radius: 50px;
+  padding: 5px 0;
+}
+
+.title {
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+}
+
+.description {
+  font-size: 13px;
+  color: var(--textColor);
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
