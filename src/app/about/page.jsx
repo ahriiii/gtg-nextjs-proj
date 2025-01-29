@@ -10,7 +10,7 @@ const page = () => {
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>
-        <b>GTG Soltion:</b> Your Local Plumbing Experts in Metro Manila and
+        <b>GTG Plumbing Expert:</b> Your Local Plumbing Experts in Metro Manila and
         neighboring provinces.
       </h1>
       <div className={styles.contentContainer}>
@@ -25,7 +25,7 @@ const page = () => {
           <div className={styles.textContainer}>
             <h2 className={styles.subtitle}>{"About Us"}</h2>
             <p className={styles.text}>
-              At GTG Plumbing Services, we believe that quality plumbing is
+              At GTG Plumbing Expert, we believe that quality plumbing is
               essential for a comfortable home or business. With over 6 years of
               experience in the plumbing industry, our skilled team is dedicated
               to providing top-notch services you can trust.
@@ -43,7 +43,7 @@ const page = () => {
           <div className={styles.visonContainer}>
             <h2 className={styles.subtitle}>{"Our Vission"}</h2>
             <p className={styles.text}>
-              At GTG Plumbing Services, our vision is to be the leading plumbing
+              At GTG Plumbing Expert, our vision is to be the leading plumbing
               service provider in our community, recognized for our commitment
               to excellence, innovation, and customer care.
             </p>
