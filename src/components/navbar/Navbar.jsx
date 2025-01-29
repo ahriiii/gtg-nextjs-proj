@@ -9,7 +9,7 @@ const Navbar = () => {
   return (
     <div className={styles.container}>
       <div className={styles.social}>
-        <Link href={"/https://web.facebook.com/GTGMalabanan"}>
+        <Link href={"https://web.facebook.com/GTGMalabanan"}>
           {" "}
           <Image
             src="/facebook.png"
