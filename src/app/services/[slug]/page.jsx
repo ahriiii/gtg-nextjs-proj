@@ -4,38 +4,44 @@ import MenuCategory from "@/components/menuCategory/MenuCategory";
 import ServicesMenu from "@/components/servicesMenu/ServicesMenu";
 import Markdown from "markdown-to-jsx";
 import fs from "fs";
+import path from 'path';
 import matter from "gray-matter";
 import getPostMetadata from "@/utils/getPostMetadata";
 import Image from "next/image";
 
-function getPostContent(slug) {
-  const folder = `src/services/`;
-  const file = folder + `${slug}.md`;
-  const content = fs.readFileSync(file, "utf8");
-
-  const matterResult = matter(content);
-  return matterResult;
-}
+const getPostContent = (slug) => {
+  const filePath = path.join(process.cwd(), 'src/services', `${slug}.md`);
+  try {
+    const fileContent = fs.readFileSync(filePath, 'utf8');
+    const { data, content } = matter(fileContent);
+    return { data, content };
+  } catch (error) {
+    console.error(`Error reading file ${filePath}:`, error);
+    return null;
+  }
+};
 
 export const generateStaticParams = async () => {
   const posts = getPostMetadata("services");
-  return posts.map((post) => {
-    {
-      slug: post.slug;
-    }
-  });
+  return posts.map((post) => ({
+    slug: post.slug,
+  }));
 };
 
 export async function generateMetadata({ params, searchParams }) {
   const id = params?.slug ? " | " + params?.slug : "";
   return {
-    title: `GTG Solution ${id.replace("_", " ")}`,
+    title: `GTG Solution ${id.replace("-", " ")}`,
   };
 }
 
 const SinglePage = (props) => {
   const slug = props.params.slug;
   const post = getPostContent(slug);
+
+  if (!post) {
+    return <div>Content not found</div>;
+  }
 
   return (
     <div className={styles.container}>
