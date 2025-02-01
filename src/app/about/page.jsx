@@ -5,6 +5,7 @@ import CoreValues from "@/components/values/CoreValues";
 import Goals from "@/components/goals/Goals";
 import MenuCategory from "@/components/menuCategory/MenuCategory";
 import Employees from "@/components/employees/Employees";
+import Contact from "@/components/contact/Contact";
 
 const page = () => {
   return (
@@ -55,6 +56,11 @@ const page = () => {
           <div className={styles.goalContainer}>
             <h2 className={styles.subtitle}>{"Our Goals"}</h2>
             <Goals />
+          </div>
+
+          <div className={styles.contactContainer}>
+            <h2 className={styles.subtitle}>{"Contact Us"}</h2>
+            <Contact />
           </div>
         </div>
         <div className={styles.aside}>

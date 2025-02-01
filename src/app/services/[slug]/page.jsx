@@ -8,6 +8,7 @@ import path from 'path';
 import matter from "gray-matter";
 import getPostMetadata from "@/utils/getPostMetadata";
 import Image from "next/image";
+import Contact from "@/components/contact/Contact";
 
 const getPostContent = (slug) => {
   const filePath = path.join(process.cwd(), 'src/services', `${slug}.md`);
@@ -71,6 +72,10 @@ const SinglePage = (props) => {
           <h2 className={styles.lightTitle}>Categories</h2>
           <MenuCategory />
         </div>
+      </div>
+      <div className={styles.contactContainer}>
+        <h2 className={styles.subtitle}>{"Contact Us"}</h2>
+        <Contact />
       </div>
     </div>
   );

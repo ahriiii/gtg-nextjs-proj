@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./featured.module.css";
 import Image from "next/image";
 import Link from "next/link";
+import Contact from "../contact/Contact";
 
 const Featured = () => {
   return (
@@ -22,6 +23,7 @@ const Featured = () => {
             to providing top-notch services you can trust.
           </p>
           <Link href='/about' className={styles.button}>Read More</Link>
+          <Contact />
         </div>
       </div>
     </div>
