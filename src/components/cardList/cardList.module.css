@@ -28,6 +28,7 @@
   flex: 1;
   display: flex;
   flex-direction: column;
+  margin-top: 50px;
   gap: 30px;
 }
 
@@ -100,7 +101,12 @@ font-size: 16px;
 
 @media screen and (max-width:768px) {
   .posts{
-    border: 1px solid var(--textColor);
-    padding: 10px;
+    box-shadow: var(--image-shadow);
+    border-radius: 5px;
+    padding: 20px;
+  }
+
+  .textContainer{
+    margin-top: 0;
   }
 }

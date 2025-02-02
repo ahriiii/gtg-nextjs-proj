@@ -55,7 +55,8 @@
 
 @media screen and (max-width:768px) {
   .container{
-    border: 1px solid var(--textColor);
+    box-shadow: var(--image-shadow);
+    border-radius: 5px;
     padding: 20px;
   }
 }
