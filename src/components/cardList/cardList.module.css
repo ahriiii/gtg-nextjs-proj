@@ -100,7 +100,8 @@ font-size: 16px;
 }
 
 @media screen and (max-width:768px) {
-  .container{
+  .posts{
     border: 1px solid var(--textColor);
+    padding: 10px;
   }
 }
