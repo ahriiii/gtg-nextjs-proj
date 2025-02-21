@@ -15,8 +15,8 @@ const Contact = () => {
                             width={200}
                         />
                     </div>
-                    <a href="tel:09501379368"><span className={styles.contactNumber}>09501379368</span></a>
-                    <a href="tel:09501379368" className={styles.callBtn}>Call Us</a>
+                    <a href="tel:09659773170"><span className={styles.contactNumber}>09659773170</span></a>
+                    <a href="tel:09659773170" className={styles.callBtn}>Call Us</a>
                 </div>
                 <div className={styles.smart}>
                     <div className={styles.imageContainer}>
@@ -28,7 +28,7 @@ const Contact = () => {
                             width={200}
                         />
                     </div>
-                    <a href="tel:09659773170"><span className={styles.contactNumber}>09659773170</span></a>
+                    <a href="tel:09501379368"><span className={styles.contactNumber}>09501379368</span></a>
                     <a href="tel:09501379368" className={styles.callBtn}>Call Us</a>
                 </div>
             </div>

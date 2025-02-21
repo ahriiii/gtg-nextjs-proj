@@ -29,7 +29,7 @@ const Employees = () => {
       </div>
       <div className={styles.item}>
         <div className={styles.imageContainer}>
-          <Image src="/avatar/bobby.png" alt="" fill className={styles.image} />
+          <Image src="/avatar/gilbert.png" alt="" fill className={styles.image} />
         </div>
         <div className={styles.textContainer}>
           <span className={`${styles.category} ${styles.headPlumber}`}>
@@ -39,13 +39,13 @@ const Employees = () => {
             We repair what your husband fixed
           </h3>
           <div className={styles.detail}>
-            <span className={styles.author}>Bobby Berlito Castro</span>
+            <span className={styles.author}>Ariel Gachitorena</span>
           </div>
         </div>
       </div>
       <div className={styles.item}>
         <div className={styles.imageContainer}>
-          <Image src="/avatar/bernard.png" alt="" fill className={styles.image} />
+          <Image src="/avatar/gilbert.png" alt="" fill className={styles.image} />
         </div>
         <div className={styles.textContainer}>
           <span className={`${styles.category} ${styles.headPlumber}`}>
@@ -55,24 +55,7 @@ const Employees = () => {
             If water runs through it, we do it!
           </h3>
           <div className={styles.detail}>
-            <span className={styles.author}>Bernard Castro</span>
-          </div>
-        </div>
-      </div>
-      <div className={styles.item}>
-        <div className={styles.imageContainer}>
-          <Image src="/p1.jpeg" alt="" fill className={styles.image} />
-        </div>
-        <div className={styles.textContainer}>
-          <span className={`${styles.category} ${styles.headPlumber}`}>
-            Head Plumber
-          </span>
-          <h3 className={styles.postTitle}>
-            Quality plumbing you can count on
-          </h3>
-          <div className={styles.detail}>
-            <span className={styles.author}>by John Doe</span>
-            <span className={styles.date}>June 12, 2021</span>
+            <span className={styles.author}>Isidro Gachitorena</span>
           </div>
         </div>
       </div>

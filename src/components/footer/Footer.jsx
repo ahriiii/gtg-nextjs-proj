@@ -20,7 +20,6 @@ const Footer = () => {
         <div className={styles.social}>
           <Image src="/facebook.png" alt="facebook" height={18} width={18} />
           <Image src="/instagram.png" alt="instagram" height={18} width={18} />
-          <Image src="/tiktok.png" alt="tiktok" height={18} width={18} />
           <Image src="/youtube.png" alt="youtube" height={18} width={18} />
         </div>
       </div>

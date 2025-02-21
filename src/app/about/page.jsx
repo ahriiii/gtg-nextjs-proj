@@ -3,21 +3,21 @@ import styles from "./about.module.css";
 import Menu from "@/components/menu/Menu";
 import CoreValues from "@/components/values/CoreValues";
 import Goals from "@/components/goals/Goals";
-import MenuCategory from "@/components/menuCategory/MenuCategory";
-import Employees from "@/components/employees/Employees";
 import Contact from "@/components/contact/Contact";
+
 
 const page = () => {
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>
-        <b>GTG Plumbing Expert:</b> Your Local Plumbing Experts in Metro Manila and
-        neighboring provinces.
+        <b>GTG Plumbing Expert:</b> Your Local Plumbing Experts in Metro Manila
+        and neighboring provinces.
       </h1>
       <div className={styles.contentContainer}>
         <div className={styles.content}>
           <div className={styles.imageContainer}>
             <Image
+              className={styles.img}
               src="/sectionImages/aboutUs.png"
               alt="Pumbing Services"
               fill
@@ -41,7 +41,7 @@ const page = () => {
               you peace of mind.
             </p>
           </div>
-          <div className={styles.visonContainer}>
+          <div className={styles.visionContainer}>
             <h2 className={styles.subtitle}>{"Our Vission"}</h2>
             <p className={styles.text}>
               At GTG Plumbing Expert, our vision is to be the leading plumbing
@@ -57,17 +57,12 @@ const page = () => {
             <h2 className={styles.subtitle}>{"Our Goals"}</h2>
             <Goals />
           </div>
-
           <div className={styles.contactContainer}>
             <h2 className={styles.subtitle}>{"Contact Us"}</h2>
             <Contact />
           </div>
         </div>
-        <div className={styles.aside}>
-          <Menu />
-          <MenuCategory />
-          <Employees />
-        </div>
+        <Menu />
       </div>
     </div>
   );
