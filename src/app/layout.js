@@ -20,6 +20,22 @@ export default function RootLayout({ children }) {
       <Head>
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
+        <script>
+          {`
+            function gtag_report_conversion(url) {
+              var callback = function () {
+                if (typeof(url) != 'undefined') {
+                  window.location = url;
+                }
+              };
+              gtag('event', 'conversion', {
+                  'send_to': 'AW-16707932797/6FBDCKyyquIZEP2k-54-',
+                  'event_callback': callback
+              });
+              return false;
+            }
+          `}
+        </script>
       </Head>
       <body className={inter.className}>
         <Script
