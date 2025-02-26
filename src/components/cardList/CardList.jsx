@@ -119,7 +119,7 @@ const cardList = () => {
       </div>
       <div className={styles.showMore}>
         <Link href={`/services`} className={styles.show}>
-          Show all services.
+          Show All Services
         </Link>
       </div>
 

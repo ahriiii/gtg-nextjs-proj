@@ -1,3 +1,5 @@
+import Head from "next/head";
+import Script from "next/script";
 import Navbar from "@/components/navbar/Navbar";
 import "./globals.css";
 import { Inter } from "next/font/google";
@@ -8,24 +10,43 @@ import ThemeProvider from "@/providers/ThemeProvider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "GTG Siphoning",
-  description: "The best Siphoning Company in the Philippines!",
+  title: "GTG Plumbing Expert",
+  description: "The best Plumbing Expert Company in the Philippines!",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <Head>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+      </Head>
       <body className={inter.className}>
+        <Script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=G-HTXXPCPFYD`}
+        />
+        <Script
+          id="google-analytics"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-HTXXPCPFYD');
+            `,
+          }}
+        />
         <ThemeContextProvider>
           <ThemeProvider>
-          <div className="container">
-            <div className="wrapper">
-              <Navbar />
-              {children}
-              <Footer />
+            <div className="container">
+              <div className="wrapper">
+                <Navbar />
+                {children}
+                <Footer />
+              </div>
             </div>
-            </div>
-            </ThemeProvider>
+          </ThemeProvider>
         </ThemeContextProvider>
       </body>
     </html>
