@@ -34,6 +34,7 @@ export default function RootLayout({ children }) {
               });
               return false;
             }
+            window.gtag_report_conversion = gtag_report_conversion;
           `}
         </script>
       </Head>
