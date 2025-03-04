@@ -29,7 +29,7 @@ const Employees = () => {
       </div>
       <div className={styles.item}>
         <div className={styles.imageContainer}>
-          <Image src="/avatar/gilbert.png" alt="" fill className={styles.image} />
+          <Image src="/avatar/pfp.png" alt="" fill className={styles.image} />
         </div>
         <div className={styles.textContainer}>
           <span className={`${styles.category} ${styles.headPlumber}`}>
@@ -45,7 +45,7 @@ const Employees = () => {
       </div>
       <div className={styles.item}>
         <div className={styles.imageContainer}>
-          <Image src="/avatar/gilbert.png" alt="" fill className={styles.image} />
+          <Image src="/avatar/pfp.png" alt="" fill className={styles.image} />
         </div>
         <div className={styles.textContainer}>
           <span className={`${styles.category} ${styles.headPlumber}`}>
