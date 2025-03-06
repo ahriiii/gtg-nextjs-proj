@@ -5,9 +5,19 @@ import styles from "./contactLogo.module.css";
 
 const Contact = () => {
     const handleCallClick = (url) => {
-        if (typeof window.gtag_report_conversion === 'function') {
-            window.gtag_report_conversion(url);
-        }
+        console.log("handleCallClick called with URL:", url);
+        const retryGtag = (retries) => {
+            if (typeof window.gtag_report_conversion === 'function') {
+                console.log("gtag_report_conversion is defined");
+                window.gtag_report_conversion(url);
+            } else if (retries > 0) {
+                console.log("gtag_report_conversion is not defined, retrying...");
+                setTimeout(() => retryGtag(retries - 1), 500);
+            } else {
+                console.log("gtag_report_conversion is not defined after retries");
+            }
+        };
+        retryGtag(5); // Retry up to 5 times
     };
 
     return (

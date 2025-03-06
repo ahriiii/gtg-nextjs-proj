@@ -6,6 +6,7 @@ import { Inter } from "next/font/google";
 import Footer from "@/components/footer/Footer";
 import { ThemeContextProvider } from "@/context/ThemeContext";
 import ThemeProvider from "@/providers/ThemeProvider";
+import ConsentBanner from "@/components/consentBanner/ConsentBanner";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -50,7 +51,12 @@ export default function RootLayout({ children }) {
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
+              gtag('consent', 'default', {
+                'ad_storage': 'denied',
+                'analytics_storage': 'denied'
+              });
               gtag('config', 'G-HTXXPCPFYD');
+              gtag('config', 'AW-16707932797');
             `,
           }}
         />
@@ -61,6 +67,7 @@ export default function RootLayout({ children }) {
                 <Navbar />
                 {children}
                 <Footer />
+                {/* <ConsentBanner /> */}
               </div>
             </div>
           </ThemeProvider>
