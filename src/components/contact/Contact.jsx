@@ -6,18 +6,19 @@ import styles from "./contactLogo.module.css";
 const Contact = () => {
     const handleCallClick = (url) => {
         console.log("handleCallClick called with URL:", url);
+        console.log("gtag_report_conversion:", typeof window.gtag_report_conversion);
         const retryGtag = (retries) => {
             if (typeof window.gtag_report_conversion === 'function') {
                 console.log("gtag_report_conversion is defined");
                 window.gtag_report_conversion(url);
             } else if (retries > 0) {
-                console.log("gtag_report_conversion is not defined, retrying...");
-                setTimeout(() => retryGtag(retries - 1), 500);
+                console.log(`gtag_report_conversion is not defined, retrying... (${retries} retries left)`);
+                setTimeout(() => retryGtag(retries - 1), 1000); // Increased retry interval to 1000ms
             } else {
                 console.log("gtag_report_conversion is not defined after retries");
             }
         };
-        retryGtag(5); // Retry up to 5 times
+        retryGtag(10); // Increased retries to 10
     };
 
     return (
