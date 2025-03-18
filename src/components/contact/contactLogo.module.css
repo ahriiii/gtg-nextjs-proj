@@ -25,6 +25,23 @@
   font-size: 32px;
 }
 
+.callBtn{
+  font-size: 18px;
+}
+
+.callBtn:hover{
+  text-decoration: underline;
+}
+
+.csntBtn{
+  padding: 5px;
+  max-width: max-content;
+  max-height: max-content;
+  border-radius: 5px;
+  border: 1px solid;
+
+}
+
 @media screen and (max-width: 1024px) {
   .title {
     font-size: 64px;

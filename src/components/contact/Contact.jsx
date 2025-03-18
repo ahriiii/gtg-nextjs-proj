@@ -2,8 +2,38 @@
 
 import Image from "next/image";
 import styles from "./contactLogo.module.css";
+import { useState, useEffect } from "react";
 
 const Contact = () => {
+    const [consentGiven, setConsentGiven] = useState(false);
+
+    useEffect(() => {
+        const consent = localStorage.getItem('consentGiven');
+        if (consent === 'true') {
+            setConsentGiven(true);
+        }
+
+        // Listen for custom consentGiven event
+        const handleConsentGiven = () => {
+            setConsentGiven(true);
+        };
+
+        window.addEventListener('consentGiven', handleConsentGiven);
+
+        return () => {
+            window.removeEventListener('consentGiven', handleConsentGiven);
+        };
+    }, []);
+
+    useEffect(() => {
+        if (consentGiven) {
+            window.gtag('consent', 'update', {
+                'ad_storage': 'granted',
+                'analytics_storage': 'granted'
+            });
+        }
+    }, [consentGiven]);
+
     const handleCallClick = (url) => {
         console.log("handleCallClick called with URL:", url);
         console.log("gtag_report_conversion:", typeof window.gtag_report_conversion);
@@ -34,16 +64,19 @@ const Contact = () => {
                             width={200}
                         />
                     </div>
-                    <a href="tel:09659773170" onClick={() => handleCallClick('tel:09659773170')}>
-                        <span className={styles.contactNumber}>09659773170</span>
-                    </a>
-                    <a
-                        href="tel:09659773170"
-                        className={styles.callBtn}
-                        onClick={() => handleCallClick('tel:09659773170')}
-                    >
-                        Call Us
-                    </a>
+                    {consentGiven ? (
+                        <a
+                            href="tel:09659773170"
+                            className={styles.callBtn}
+                            onClick={() => handleCallClick('tel:09659773170')}
+                        >
+                            Call Us
+                        </a>
+                    ) : (
+                        <button className={styles.csntBtn} disabled>
+                            Consent Required
+                        </button>
+                    )}
                 </div>
                 <div className={styles.smart}>
                     <div className={styles.imageContainer}>
@@ -55,16 +88,19 @@ const Contact = () => {
                             width={200}
                         />
                     </div>
-                    <a href="tel:09501379368" onClick={() => handleCallClick('tel:09501379368')}>
-                        <span className={styles.contactNumber}>09501379368</span>
-                    </a>
-                    <a
-                        href="tel:09501379368"
-                        className={styles.callBtn}
-                        onClick={() => handleCallClick('tel:09501379368')}
-                    >
-                        Call Us
-                    </a>
+                    {consentGiven ? (
+                        <a
+                            href="tel:09501379368"
+                            className={styles.callBtn}
+                            onClick={() => handleCallClick('tel:09501379368')}
+                        >
+                            Call Us
+                        </a>
+                    ) : (
+                        <button className={styles.csntBtn} disabled>
+                            Consent Required
+                        </button>
+                    )}
                 </div>
             </div>
         </div>

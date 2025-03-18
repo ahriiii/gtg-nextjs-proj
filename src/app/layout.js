@@ -70,7 +70,7 @@ export default function RootLayout({ children }) {
                 <Navbar />
                 {children}
                 <Footer />
-                {/* <ConsentBanner /> */}
+                <ConsentBanner />
               </div>
             </div>
           </ThemeProvider>
