@@ -43,12 +43,12 @@ const Contact = () => {
                 window.gtag_report_conversion(url);
             } else if (retries > 0) {
                 console.log(`gtag_report_conversion is not defined, retrying... (${retries} retries left)`);
-                setTimeout(() => retryGtag(retries - 1), 1000); // Increased retry interval to 1000ms
+                setTimeout(() => retryGtag(retries - 1), 2000); // Increased retry interval to 2000ms
             } else {
                 console.log("gtag_report_conversion is not defined after retries");
             }
         };
-        retryGtag(10); // Increased retries to 10
+        retryGtag(15); // Increased retries to 15
     };
 
     return (
